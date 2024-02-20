@@ -1,0 +1,57 @@
+/* selector pe tag-uri(prin fisier .css extern) */
+
+div{
+    background-color: cadetblue;
+}
+
+div p {
+    color: brown;
+}
+
+span h2 {
+    color: blueviolet;
+}
+
+div ul li {
+    background-color: chartreuse;
+    color: darkorange;
+}
+div ol {
+    background-color: bisque;
+}
+
+header {
+    color:burlywood;
+}
+
+/* atribute class selection */
+
+.divheader p {
+    background-color:darkgray;
+    text-decoration: underline;
+}
+
+/* atribute id selection */
+#span h2 {
+    background-color: forestgreen;
+    color: fuchsia;
+}
+
+/* .text {
+    background-color: rgb(123, 91, 107);
+}
+
+.paragraph1 {
+    color: coral;
+    text-align: center;
+}
+
+#parag {
+    color: black;
+    text-decoration: overline underline;
+    font-family: Arial;
+} */
+
+.btn-primary {
+    background-color: brown;
+}

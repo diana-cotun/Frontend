@@ -5,97 +5,285 @@
 <head>
     <!-- meta informations: title, import external css files, import JavaStript libraries(stripts) -->
     <!-- encodare in utf8 byDefault(8 biti)-->
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <title>
         My first web page
     </title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- external css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/myScript.js" type="text/javascript"></script>
+
+    <!-- internal css -->
+    <style>
+        /* div {
+            background-color: cadetblue;
+        }
+
+        div p {
+            color: brown;
+        }
+
+        span h2 {
+            color: blueviolet;
+        }
+
+        div ul li {
+            background-color: chartreuse;
+            color: darkorange;
+        }
+
+        div ol {
+            background-color: bisque;
+        }
+
+        header {
+            color: burlywood;
+        } */
+
+        div table {
+            background-color: beige;
+            color: darkblue;
+        }
+
+        .text {
+            background-color: rgb(123, 91, 107);
+            border-top: 3px solid red;
+        }
+
+        .paragraph1 {
+            color: coral;
+            text-align: center;
+        }
+
+        #parag {
+            color: black;
+            text-decoration: overline underline;
+            font-family: Arial;
+        }
+
+        #images {
+            margin: 50px;
+        }
+
+        #img {
+            padding: 10px;
+        }
+    </style>
+
 
 </head>
 
+<!-- Shift + ALT + F -->
+<!-- BODY is the real content of the page, iar aceasta sectiune poate fi impartita in 3 zone, respectiv: -->
+<!-- sectiunea navbar/header -->
+<!-- restul continutului dupa header -->
+<!-- sectiunea de footer -->
+
 
 <body>
-    <!-- BODY is the real content of the page, iar aceasta sectiune poate fi impartita in 3 zone, respectiv: -->
+    <div class="divheader">
+        <p>Header section with div</p>
+    </div>
+    <header class="header">
+        My header section
+    </header>
 
-    <!-- sectiunea navbar/header -->
-    
+    <!-- inline style atribute -->
+    <p style="color: chocolate; font-weight: bolder;"> W3Schools is a web developer's site.</p>
 
-    <!-- restul continutului dupa header -->
     <!-- HTML HEADINGS, atribute pe text -->
     <h1 style="color: brown; text-align: center;"> Welcome to HTML, CSS, JS course </h1>
-    <h2>This is an h2 heading</h2>
+    <hr>
 
-    <p> <b>This</b> is my first HTML paragraphs <ins> by Diana Cotun</ins></p>
-    <p><strong>Lorem</strong>, ipsum dolor sit amet consectetur adipisicing elit.<i>Quidem, aut maxime laudantium,</i> 
-        doloribus hic similique doloremque totam ipsam quisquam reiciendis impedit perferendis provident? Magni sequi ex
-        id, sapiente recusandae perferendis.</p>
-    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at
-        its layout. The point of using Lorem
-        Ipsum is that it has a more-or-less <small>normal</small> distribution of letters, as opposed to using 'Content here, content
-        here', making it look like readable English.
-        Many desktop <del>publishing</del> packages and web page editors now use Lorem Ipsum as their default model text, and a
-        search for 'lorem ipsum' will uncover many web
-        sites still in their infancy. Various <sup>versions</sup> have evolved over the years, <sub>sometimes</sub>  by accident, sometimes on
-        purpose <mark>(injected humour and the like)</mark>.</p>
+    <!-- onclick="sayHello()" -->
+    <button id="buton" type="button" class="btn btn-primary" onclick="sayHello()">
+        Hello
+    </button>
 
-    <!-- HTML images -->
-    <img src="/img/catel.png" alt="catel fericit" width="700" height="500">
-    <img src="/img/girafa.jpg" alt="girafa trista" width="700" height="500">
+
+    <span id="span">
+        <h2>This is an <strong style="color: rgb(98, 6, 6);"> h2 </strong> heading</h2>
+    </span>
+
+    <span>
+        <h2>This is an <span> h2 </span> heading</h2>
+    </span>
+
+    <span>
+        <h2>This is an h2 heading</h2>
+    </span>
+
+    <span>
+        <h2>This is an h2 heading</h2>
+    </span>
+
+    <button id="buton" type="button" class="btn btn-primary" onclick="date()" >
+        Date
+    </button>
+    <h5 id="date"> </h5>
+
+
+    <div class="text">
+        <p class="paragraph1" id="parag" style="color: blue;"> <b>This</b> is my first HTML paragraphs <ins> by Diana Cotun</ins></p>
+        <p><strong>Lorem</strong>, ipsum dolor sit amet consectetur adipisicing elit.<i>Quidem, aut maxime
+                laudantium,</i>
+            doloribus hic similique doloremque totam ipsam quisquam reiciendis impedit perferendis provident? Magni
+            sequi ex
+            id, sapiente recusandae perferendis.</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking
+            at
+            its layout. The point of using Lorem
+            Ipsum is that it has a more-or-less <small>normal</small> distribution of letters, as opposed to using
+            'Content here, content
+            here', making it look like readable English.
+            Many desktop <del>publishing</del> packages and web page editors now use Lorem Ipsum as their default model
+            text, and a
+            search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various <sup>versions</sup> have evolved over the years, <sub>sometimes</sub>
+            by accident, sometimes on
+            purpose <mark>(injected humour and the like)</mark>.</p>
+    </div>
+
+    <div id="images">
+        <!-- HTML images -->
+        <img id="img" src="/img/catel.png" alt="catel fericit" width="490" height="300">
+        <img id="img" src="/img/girafa.jpg" alt="girafa trista" width="490" height="300">
+    </div>
 
     <!-- C:\Users\diana\Frontend = calea absoluta (lunga)-->
-    <!-- img\catel.png = calea relativa (scurta)--> 
+    <!-- img\catel.png = calea relativa (scurta)-->
 
     <br><br>
 
     <!-- HTML hyperlink (anchor tag)/ target: _self/ _blank-->
     <a href="https://www.descopera.ro/" target="_blank">
-        This is my first external link 
+        This is my first external link
     </a>
 
     <!-- Lists (unordered/ ordered) -->
     <!-- emeta abreviation (ul>li*4) lista unordered cu 4 elemente -->
     <br><br>
-    <div><b> Drings list: </b></div>
-    <ul>
-        <li>Tea</li>
-        <li>Coffe</li>
-        <li>Water</li>
-        <li>Wine</li>
-    </ul>
 
-    <h4>Trips:</h4>
-    <ol>
-        <li>Maroc</li>
-        <li>Portugalia</li>
-        <li>Istambul</li>
-    </ol>
+    <div class="lists">
+        <span><b> Drings list: </b></span>
+        <ul>
+            <li>Tea</li>
+            <li>Coffe</li>
+            <li>Water</li>
+            <li>Wine</li>
+        </ul>
+
+        <h4>Trips:</h4>
+        <ol>
+            <li>Maroc</li>
+            <li>Portugalia</li>
+            <li>Istambul</li>
+        </ol>
+    </div>
 
     <!-- HTML Tables -->
-    <table>
-        <!-- define table header -->
-        <th>
-            <tr>
-                <td>Name</td>
-                <td>Age</td>
-            </tr>
-        </th>
-        <!-- define table body -->
-        <tbody>
-            <tr>
-                <td>Diana</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>Emma</td>
-                <td>30</td>
-            </tr>
-        </tbody>
-    </table>
-   
-    
+    <div class="table">
+        <table>
+            <!-- define table header -->
+            <th>
+                <tr>
+                    <td>Name</td>
+                    <td>Age</td>
+                </tr>
+            </th>
+            <!-- define table body -->
+            <tbody>
+                <tr>
+                    <td>Diana</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Emma</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-    <a href="https://www.libertatea.ro/lifestyle/animale-exotice-din-lume-curiozitati-3863618" target="_blank">
-        <img src="/img/tigru.jpg" alt="girafa trista" width="400" >
-    </a>
+    <span>
+        <a href="https://www.libertatea.ro/lifestyle/animale-exotice-din-lume-curiozitati-3863618" target="_blank">
+            <img src="/img/tigru.jpg" alt="girafa trista" width="400">
+        </a>
+    </span>
+
+    <span class="poetry">
+        <pre>
+        My Bonnie lies over the ocean.
+        My Bonnie lies over the sea.
+        My Bonnie lies over the ocean.
+        Oh, bring back my Bonnie to me.
+        </pre>
+    </span>
+
+    <!-- HTML Forms -->
+    <div>
+        <form>
+            <label>
+                First name:
+            </label>
+            <input type="text">
+
+            <label>
+                Last name:
+            </label>
+            <input type="text">
+
+            <label>
+                Email:
+            </label>
+            <input type="text">
+
+            <label>
+                Phone:
+            </label>
+            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <input class="btn btn-success" type="submit" value="Submit">
+
+            <!-- Form type: radio -->
+            <input type="radio" value="Option">
+            <label>Select an option</label>
+            <input type="radio" value="Option">
+            <label>Select an option</label>
+            <input type="radio" value="Option">
+            <label>Select an option</label>
+        </form>
+    </div>
+
+    <br>
+
+    <div>
+        <form>
+            <label for="Details">Details</label>
+            <textarea name="details" id="details" cols="2" rows="5" maxlength="20"> </textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- HTML drop_down list -->
+    <label>Select your favorite drink</label>
+    <select name="drinks" id="drink-select">
+        <option value="cola">Cola</option>
+        <option value="water">Water</option>
+        <option value="wine">Wine</option>
+    </select>
+
+    <!-- codeium -->
+    <!-- bootstrap -->
+
+
 
 
 
@@ -111,9 +299,57 @@
 
 
     <!-- sectiunea de footer -->
+    <div>
+        <p>Footer</p>
+    </div>
+
     <footer>
+        My footer
 
     </footer>
+
+    <script>
+        // java script code
+        // document.write("Welcome to Java Script");
+
+        // alert("alert");
+
+        // console.log("test");
+
+        // var name = "Diana";
+        // console.log(name);
+
+        // var _value = 15;
+        // var $value = 30;
+
+        // console.log(_value);
+
+        // // variabila var pot fi redeclarate, valoarea anterioara va fi updatata
+        // var name = "Emma";
+        // console.log(name);
+
+        // // let se foloseste ca scop la nivel de bloc, poate fi reasignata dar nu redeclarata in acelasi bloc
+        // let x = 10;
+        // x = 20;
+        // x = "ana"
+        // console.log(x);
+
+        // // const = constanta, nu poate fi reasignata, are scop la nivel de bloc
+        // const y = 5;
+        // // y = 10;
+        // console.log(y);
+
+        // let age = 10;
+        // console.log("My age is " + age, name);
+
+        // var p = 15;
+        // var q = "15";
+        // console.log(p == q); // equal (verifica doar valoarea)
+        // console.log(p === q); // identical (verifica tipul si valoarea)
+        // console.log(p != q); // not equal 
+        // console.log(p !== q); // not identical 
+        
+    </script>
 
 
 </body>
